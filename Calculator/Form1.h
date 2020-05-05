@@ -25,6 +25,7 @@ namespace CppCLRWinformsProjekt {
 		char operation;
 
 	private: System::Windows::Forms::FontDialog^ fontDialog1;
+	private: System::Windows::Forms::Button^ btnImpartireaLui1Lax;
 	private: System::Windows::Forms::TextBox^ userInputTxtBx;
 	public:
 
@@ -105,6 +106,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnPlus = (gcnew System::Windows::Forms::Button());
 			this->fontDialog1 = (gcnew System::Windows::Forms::FontDialog());
 			this->userInputTxtBx = (gcnew System::Windows::Forms::TextBox());
+			this->btnImpartireaLui1Lax = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btn7
@@ -310,11 +312,22 @@ namespace CppCLRWinformsProjekt {
 			this->userInputTxtBx->Text = L"0";
 			this->userInputTxtBx->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
+			// btnImpartireaLui1Lax
+			// 
+			this->btnImpartireaLui1Lax->Location = System::Drawing::Point(297, 343);
+			this->btnImpartireaLui1Lax->Name = L"btnImpartireaLui1Lax";
+			this->btnImpartireaLui1Lax->Size = System::Drawing::Size(95, 39);
+			this->btnImpartireaLui1Lax->TabIndex = 31;
+			this->btnImpartireaLui1Lax->Text = L" 1/x";
+			this->btnImpartireaLui1Lax->UseVisualStyleBackColor = true;
+			this->btnImpartireaLui1Lax->Click += gcnew System::EventHandler(this, &Form1::btnImpartireaLui1Lax_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(528, 394);
+			this->Controls->Add(this->btnImpartireaLui1Lax);
 			this->Controls->Add(this->userInputTxtBx);
 			this->Controls->Add(this->btnPlus);
 			this->Controls->Add(this->btnMinus);
@@ -452,6 +465,10 @@ private: System::Void btnPatrat_Click(System::Object^ sender, System::EventArgs^
 private: System::Void btnProcent_Click(System::Object^ sender, System::EventArgs^ e) {
 	op2 = Convert::ToDouble(userInputTxtBx->Text);
 	result = procent(op1, op2, operation);
+	userInputTxtBx->Text = Convert::ToString(result);
+}
+private: System::Void btnImpartireaLui1Lax_Click(System::Object^ sender, System::EventArgs^ e) {
+	result = ImpartireaLui1Lax(Convert::ToDouble(userInput));
 	userInputTxtBx->Text = Convert::ToString(result);
 }
 };

@@ -44,3 +44,8 @@ double procent(double Op1, double Op2, char Operation)
 
 	return result;
 }
+
+double ImpartireaLui1Lax(double a)
+{
+	return 1 / a;
+}
