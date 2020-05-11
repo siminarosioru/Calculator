@@ -49,3 +49,10 @@ double ImpartireaLui1Lax(double a)
 {
 	return 1 / a;
 }
+
+double SquareRoot(double a)
+{
+	double result = sqrt(a);
+
+	return result;
+}

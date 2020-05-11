@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "FunctionsCalculator.h"
 
@@ -12,7 +12,7 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Zusammenfassung für Form1
+	/// Zusammenfassung fÃ¼r Form1
 	/// </summary>
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
@@ -26,6 +26,7 @@ namespace CppCLRWinformsProjekt {
 
 	private: System::Windows::Forms::FontDialog^ fontDialog1;
 	private: System::Windows::Forms::Button^ btnImpartireaLui1Lax;
+	private: System::Windows::Forms::Button^ btnSquareRoot;
 	private: System::Windows::Forms::TextBox^ userInputTxtBx;
 	public:
 
@@ -34,7 +35,7 @@ namespace CppCLRWinformsProjekt {
 		{
 			InitializeComponent();
 			//
-			//TODO: Konstruktorcode hier hinzufügen.
+			//TODO: Konstruktorcode hier hinzufÃ¼gen.
 			//
 		}
 
@@ -80,8 +81,8 @@ namespace CppCLRWinformsProjekt {
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Erforderliche Methode für die Designerunterstützung.
-		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+		/// Erforderliche Methode fÃ¼r die DesignerunterstÃ¼tzung.
+		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geÃ¤ndert werden.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -107,6 +108,7 @@ namespace CppCLRWinformsProjekt {
 			this->fontDialog1 = (gcnew System::Windows::Forms::FontDialog());
 			this->userInputTxtBx = (gcnew System::Windows::Forms::TextBox());
 			this->btnImpartireaLui1Lax = (gcnew System::Windows::Forms::Button());
+			this->btnSquareRoot = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btn7
@@ -121,7 +123,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnDot
 			// 
-			this->btnDot->Location = System::Drawing::Point(297, 279);
+			this->btnDot->Location = System::Drawing::Point(297, 236);
 			this->btnDot->Name = L"btnDot";
 			this->btnDot->Size = System::Drawing::Size(95, 39);
 			this->btnDot->TabIndex = 12;
@@ -131,7 +133,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnReset
 			// 
-			this->btnReset->Location = System::Drawing::Point(162, 279);
+			this->btnReset->Location = System::Drawing::Point(161, 236);
 			this->btnReset->Name = L"btnReset";
 			this->btnReset->Size = System::Drawing::Size(95, 39);
 			this->btnReset->TabIndex = 13;
@@ -141,7 +143,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn0
 			// 
-			this->btn0->Location = System::Drawing::Point(30, 279);
+			this->btn0->Location = System::Drawing::Point(30, 236);
 			this->btn0->Name = L"btn0";
 			this->btn0->Size = System::Drawing::Size(95, 39);
 			this->btn0->TabIndex = 20;
@@ -151,7 +153,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn3
 			// 
-			this->btn3->Location = System::Drawing::Point(297, 217);
+			this->btn3->Location = System::Drawing::Point(297, 191);
 			this->btn3->Name = L"btn3";
 			this->btn3->Size = System::Drawing::Size(95, 39);
 			this->btn3->TabIndex = 15;
@@ -161,7 +163,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn2
 			// 
-			this->btn2->Location = System::Drawing::Point(161, 218);
+			this->btn2->Location = System::Drawing::Point(162, 191);
 			this->btn2->Name = L"btn2";
 			this->btn2->Size = System::Drawing::Size(95, 39);
 			this->btn2->TabIndex = 16;
@@ -171,7 +173,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn1
 			// 
-			this->btn1->Location = System::Drawing::Point(30, 218);
+			this->btn1->Location = System::Drawing::Point(30, 191);
 			this->btn1->Name = L"btn1";
 			this->btn1->Size = System::Drawing::Size(95, 39);
 			this->btn1->TabIndex = 17;
@@ -181,7 +183,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn6
 			// 
-			this->btn6->Location = System::Drawing::Point(297, 159);
+			this->btn6->Location = System::Drawing::Point(297, 146);
 			this->btn6->Name = L"btn6";
 			this->btn6->Size = System::Drawing::Size(95, 39);
 			this->btn6->TabIndex = 18;
@@ -191,7 +193,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn5
 			// 
-			this->btn5->Location = System::Drawing::Point(162, 158);
+			this->btn5->Location = System::Drawing::Point(161, 146);
 			this->btn5->Name = L"btn5";
 			this->btn5->Size = System::Drawing::Size(95, 39);
 			this->btn5->TabIndex = 19;
@@ -201,7 +203,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btn4
 			// 
-			this->btn4->Location = System::Drawing::Point(30, 158);
+			this->btn4->Location = System::Drawing::Point(30, 146);
 			this->btn4->Name = L"btn4";
 			this->btn4->Size = System::Drawing::Size(95, 39);
 			this->btn4->TabIndex = 20;
@@ -231,17 +233,17 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnPatrat
 			// 
-			this->btnPatrat->Location = System::Drawing::Point(162, 342);
+			this->btnPatrat->Location = System::Drawing::Point(162, 279);
 			this->btnPatrat->Name = L"btnPatrat";
 			this->btnPatrat->Size = System::Drawing::Size(95, 39);
 			this->btnPatrat->TabIndex = 23;
-			this->btnPatrat->Text = L" x²";
+			this->btnPatrat->Text = L" xÂ²";
 			this->btnPatrat->UseVisualStyleBackColor = true;
 			this->btnPatrat->Click += gcnew System::EventHandler(this, &Form1::btnPatrat_Click);
 			// 
 			// btnProcent
 			// 
-			this->btnProcent->Location = System::Drawing::Point(30, 342);
+			this->btnProcent->Location = System::Drawing::Point(30, 281);
 			this->btnProcent->Name = L"btnProcent";
 			this->btnProcent->Size = System::Drawing::Size(95, 39);
 			this->btnProcent->TabIndex = 24;
@@ -251,7 +253,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnEqual
 			// 
-			this->btnEqual->Location = System::Drawing::Point(410, 342);
+			this->btnEqual->Location = System::Drawing::Point(410, 281);
 			this->btnEqual->Name = L"btnEqual";
 			this->btnEqual->Size = System::Drawing::Size(95, 39);
 			this->btnEqual->TabIndex = 25;
@@ -261,7 +263,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnDivision
 			// 
-			this->btnDivision->Location = System::Drawing::Point(410, 279);
+			this->btnDivision->Location = System::Drawing::Point(410, 236);
 			this->btnDivision->Name = L"btnDivision";
 			this->btnDivision->Size = System::Drawing::Size(95, 39);
 			this->btnDivision->TabIndex = 26;
@@ -271,7 +273,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnMultiplication
 			// 
-			this->btnMultiplication->Location = System::Drawing::Point(410, 217);
+			this->btnMultiplication->Location = System::Drawing::Point(410, 191);
 			this->btnMultiplication->Name = L"btnMultiplication";
 			this->btnMultiplication->Size = System::Drawing::Size(95, 39);
 			this->btnMultiplication->TabIndex = 27;
@@ -281,7 +283,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnMinus
 			// 
-			this->btnMinus->Location = System::Drawing::Point(410, 159);
+			this->btnMinus->Location = System::Drawing::Point(410, 146);
 			this->btnMinus->Name = L"btnMinus";
 			this->btnMinus->Size = System::Drawing::Size(95, 39);
 			this->btnMinus->TabIndex = 28;
@@ -314,7 +316,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnImpartireaLui1Lax
 			// 
-			this->btnImpartireaLui1Lax->Location = System::Drawing::Point(297, 343);
+			this->btnImpartireaLui1Lax->Location = System::Drawing::Point(30, 326);
 			this->btnImpartireaLui1Lax->Name = L"btnImpartireaLui1Lax";
 			this->btnImpartireaLui1Lax->Size = System::Drawing::Size(95, 39);
 			this->btnImpartireaLui1Lax->TabIndex = 31;
@@ -322,11 +324,22 @@ namespace CppCLRWinformsProjekt {
 			this->btnImpartireaLui1Lax->UseVisualStyleBackColor = true;
 			this->btnImpartireaLui1Lax->Click += gcnew System::EventHandler(this, &Form1::btnImpartireaLui1Lax_Click);
 			// 
+			// btnSquareRoot
+			// 
+			this->btnSquareRoot->Location = System::Drawing::Point(161, 326);
+			this->btnSquareRoot->Name = L"btnSquareRoot";
+			this->btnSquareRoot->Size = System::Drawing::Size(95, 39);
+			this->btnSquareRoot->TabIndex = 32;
+			this->btnSquareRoot->Text = L"âˆšx";
+			this->btnSquareRoot->UseVisualStyleBackColor = true;
+			this->btnSquareRoot->Click += gcnew System::EventHandler(this, &Form1::btnSquareRoot_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(528, 394);
+			this->ClientSize = System::Drawing::Size(522, 377);
+			this->Controls->Add(this->btnSquareRoot);
 			this->Controls->Add(this->btnImpartireaLui1Lax);
 			this->Controls->Add(this->userInputTxtBx);
 			this->Controls->Add(this->btnPlus);
@@ -469,6 +482,10 @@ private: System::Void btnProcent_Click(System::Object^ sender, System::EventArgs
 }
 private: System::Void btnImpartireaLui1Lax_Click(System::Object^ sender, System::EventArgs^ e) {
 	result = ImpartireaLui1Lax(Convert::ToDouble(userInput));
+	userInputTxtBx->Text = Convert::ToString(result);
+}
+private: System::Void btnSquareRoot_Click(System::Object^ sender, System::EventArgs^ e) {
+	result = SquareRoot(Convert::ToDouble(userInput));
 	userInputTxtBx->Text = Convert::ToString(result);
 }
 };
