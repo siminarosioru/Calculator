@@ -16,3 +16,5 @@ double procent(double Op1, double Op2, char Operation);
 double ImpartireaLui1Lax(double a);
 
 double SquareRoot(double a);
+
+double CubeRoot(double a);

@@ -27,6 +27,7 @@ namespace CppCLRWinformsProjekt {
 	private: System::Windows::Forms::FontDialog^ fontDialog1;
 	private: System::Windows::Forms::Button^ btnImpartireaLui1Lax;
 	private: System::Windows::Forms::Button^ btnSquareRoot;
+	private: System::Windows::Forms::Button^ btnCubeRoot;
 	private: System::Windows::Forms::TextBox^ userInputTxtBx;
 	public:
 
@@ -109,6 +110,7 @@ namespace CppCLRWinformsProjekt {
 			this->userInputTxtBx = (gcnew System::Windows::Forms::TextBox());
 			this->btnImpartireaLui1Lax = (gcnew System::Windows::Forms::Button());
 			this->btnSquareRoot = (gcnew System::Windows::Forms::Button());
+			this->btnCubeRoot = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btn7
@@ -326,7 +328,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			// btnSquareRoot
 			// 
-			this->btnSquareRoot->Location = System::Drawing::Point(161, 326);
+			this->btnSquareRoot->Location = System::Drawing::Point(162, 326);
 			this->btnSquareRoot->Name = L"btnSquareRoot";
 			this->btnSquareRoot->Size = System::Drawing::Size(95, 39);
 			this->btnSquareRoot->TabIndex = 32;
@@ -334,11 +336,23 @@ namespace CppCLRWinformsProjekt {
 			this->btnSquareRoot->UseVisualStyleBackColor = true;
 			this->btnSquareRoot->Click += gcnew System::EventHandler(this, &Form1::btnSquareRoot_Click);
 			// 
+			// btnCubeRoot
+			// 
+			this->btnCubeRoot->Location = System::Drawing::Point(297, 326);
+			this->btnCubeRoot->Name = L"btnCubeRoot";
+			this->btnCubeRoot->Size = System::Drawing::Size(95, 39);
+			this->btnCubeRoot->TabIndex = 33;
+			this->btnCubeRoot->Text = L"³√x";
+			this->btnCubeRoot->UseVisualStyleBackColor = true;
+			this->btnCubeRoot->UseWaitCursor = true;
+			this->btnCubeRoot->Click += gcnew System::EventHandler(this, &Form1::btnCubeRoot_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(522, 377);
+			this->Controls->Add(this->btnCubeRoot);
 			this->Controls->Add(this->btnSquareRoot);
 			this->Controls->Add(this->btnImpartireaLui1Lax);
 			this->Controls->Add(this->userInputTxtBx);
@@ -486,6 +500,10 @@ private: System::Void btnImpartireaLui1Lax_Click(System::Object^ sender, System:
 }
 private: System::Void btnSquareRoot_Click(System::Object^ sender, System::EventArgs^ e) {
 	result = SquareRoot(Convert::ToDouble(userInput));
+	userInputTxtBx->Text = Convert::ToString(result);
+}
+private: System::Void btnCubeRoot_Click(System::Object^ sender, System::EventArgs^ e) {
+	result = CubeRoot(Convert::ToDouble(userInput));
 	userInputTxtBx->Text = Convert::ToString(result);
 }
 };
