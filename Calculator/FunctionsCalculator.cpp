@@ -57,6 +57,7 @@ double SquareRoot(double a)
 	return result;
 }
 
+//implement the cube root function
 double CubeRoot(double a)
 {
 	return cbrt(a);
