@@ -18,3 +18,5 @@ double ImpartireaLui1Lax(double a);
 double SquareRoot(double a);
 
 double CubeRoot(double a);
+
+double Cubic(double a);

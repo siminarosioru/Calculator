@@ -26,8 +26,14 @@ namespace CppCLRWinformsProjekt {
 
 	private: System::Windows::Forms::FontDialog^ fontDialog1;
 	private: System::Windows::Forms::Button^ btnImpartireaLui1Lax;
+
+
+
+
+
 	private: System::Windows::Forms::Button^ btnSquareRoot;
 	private: System::Windows::Forms::Button^ btnCubeRoot;
+	private: System::Windows::Forms::Button^ btnCubic;
 	private: System::Windows::Forms::TextBox^ userInputTxtBx;
 	public:
 
@@ -111,6 +117,7 @@ namespace CppCLRWinformsProjekt {
 			this->btnImpartireaLui1Lax = (gcnew System::Windows::Forms::Button());
 			this->btnSquareRoot = (gcnew System::Windows::Forms::Button());
 			this->btnCubeRoot = (gcnew System::Windows::Forms::Button());
+			this->btnCubic = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btn7
@@ -347,11 +354,22 @@ namespace CppCLRWinformsProjekt {
 			this->btnCubeRoot->UseWaitCursor = true;
 			this->btnCubeRoot->Click += gcnew System::EventHandler(this, &Form1::btnCubeRoot_Click);
 			// 
+			// btnCubic
+			// 
+			this->btnCubic->Location = System::Drawing::Point(297, 281);
+			this->btnCubic->Name = L"btnCubic";
+			this->btnCubic->Size = System::Drawing::Size(95, 39);
+			this->btnCubic->TabIndex = 34;
+			this->btnCubic->Text = L" x3";
+			this->btnCubic->UseVisualStyleBackColor = true;
+			this->btnCubic->Click += gcnew System::EventHandler(this, &Form1::btnCubic_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(522, 377);
+			this->Controls->Add(this->btnCubic);
 			this->Controls->Add(this->btnCubeRoot);
 			this->Controls->Add(this->btnSquareRoot);
 			this->Controls->Add(this->btnImpartireaLui1Lax);
@@ -504,6 +522,10 @@ private: System::Void btnSquareRoot_Click(System::Object^ sender, System::EventA
 }
 private: System::Void btnCubeRoot_Click(System::Object^ sender, System::EventArgs^ e) {
 	result = CubeRoot(Convert::ToDouble(userInput));
+	userInputTxtBx->Text = Convert::ToString(result);
+}
+private: System::Void btnCubic_Click(System::Object^ sender, System::EventArgs^ e) {
+	result = Cubic(Convert::ToDouble(userInput));
 	userInputTxtBx->Text = Convert::ToString(result);
 }
 };

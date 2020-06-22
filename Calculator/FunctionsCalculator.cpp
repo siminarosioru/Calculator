@@ -62,3 +62,8 @@ double CubeRoot(double a)
 {
 	return cbrt(a);
 }
+
+double Cubic(double a)
+{
+	return a * a * a;
+}
